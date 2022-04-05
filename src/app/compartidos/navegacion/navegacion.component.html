@@ -1,0 +1,49 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="true">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">SEA</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+  
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            Estudiantes<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/estudiante/sistema']" routerLinkActive="router-link-active">Sistema SEA</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/estudiante/cursos']" routerLinkActive="router-link-active">Cursos</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/estudiante/materiales']" routerLinkActive="router-link-active">Materiales</a>
+          </div>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            Asesores<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/asesores/perfil']" routerLinkActive="router-link-active">Perfil</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/asesores/capacitacion']" routerLinkActive="router-link-active">Curso de capacitación</a>
+          </div>
+        </li>
+
+        <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                  Coordinadores Estatales<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                  <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/coordinadores/sede']" routerLinkActive="router-link-active">¿Cómo puedo instalar una sede SEA?</a>
+                  <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/coordinadores/documentos']" routerLinkActive="router-link-active">Lista de documentos</a>
+                </div>
+              </li>
+  
+      </ul>
+
+    </links>
+    <!-- Collapsible content -->
+  </mdb-navbar>
+  <!--/.Navbar-->
