@@ -17,6 +17,7 @@ import { MdbWysiwygModule } from 'mdb-wysiwyg';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CompartidosModule } from './compartidos/compartidos.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { CompartidosModule } from './compartidos/compartidos.module';
     CompartidosModule
   ],
   exports: [],
-  providers: [MDBSpinningPreloader],
+  providers: [MDBSpinningPreloader,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
   schemas:      [ NO_ERRORS_SCHEMA ]
 })
