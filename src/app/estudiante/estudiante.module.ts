@@ -9,15 +9,11 @@ import { CompartidosModule } from '../compartidos/compartidos.module';
 import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 
 
-
-
-
 @NgModule({
   declarations: [
     SistemaComponent,
     CursosComponent,
-    MaterialesComponent,
-   
+    MaterialesComponent
   ],
   imports: [
     CommonModule,

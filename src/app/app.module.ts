@@ -18,11 +18,14 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CompartidosModule } from './compartidos/compartidos.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ModalComponent } from './modal/modal.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -40,10 +43,15 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     MdbWysiwygModule,
     AppRoutingModule,
     CompartidosModule
+    
   ],
   exports: [],
+  entryComponents: [ ModalComponent ],
   providers: [MDBSpinningPreloader,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
   schemas:      [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
+
+
+
