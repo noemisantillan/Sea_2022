@@ -20,6 +20,9 @@ const routes: Routes = [
   { path: 'coordinadores',
     loadChildren:()=> import('./coordinadores/coordinadores.module').then(m => m.CoordinadoresModule)
   },
+  { path: 'educamedia',
+    loadChildren:()=> import('./educamedia/educamedia.module').then(m => m.EducamediaModule)
+  },
 
   { path: '**', redirectTo:'home' }
 ];

@@ -20,7 +20,6 @@ import { CompartidosModule } from './compartidos/compartidos.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ModalComponent } from './modal/modal.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
