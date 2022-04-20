@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'coordinadores',
     loadChildren:()=> import('./coordinadores/coordinadores.module').then(m => m.CoordinadoresModule)
   },
-  { path: 'educamedia',
+  { path: 'audiovisuales',
     loadChildren:()=> import('./educamedia/educamedia.module').then(m => m.EducamediaModule)
   },
 

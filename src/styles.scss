@@ -2,100 +2,103 @@
 
 body {
     font-family: "Montserrat"!important;
-  }
+}
 
 .text-default {
     color: #3a9e6f !important;
 }
 
-.carousel-control-next-icon{
-  background-color: #b8bebce7;
+.carousel-control-next-icon {
+    background-color: #b8bebce7;
     border-radius: 20px;
 }
 
 .carousel-control-prev-icon {
-  background-color: #b8bebce7;
-  border-radius: 20px;
+    background-color: #b8bebce7;
+    border-radius: 20px;
 }
 
 .carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 15;
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 20%;
-  list-style: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 20%;
+    list-style: none;
 }
-
 
 //HEADER GOB
 .inverse2 {
-  background-color: #0C231E !important;
-  border-color: transparent !important;
+    background-color: #0C231E !important;
+    border-color: transparent !important;
 }
 
 // FOOTER GOB
 .main-footer2 {
-  background-color: #13322B;
-  min-height: 56px;
-  color: #FFF;
-  padding: 0px 0 0px;
-  text-align: left;
-  font-weight: 300;
+    background-color: #13322B;
+    min-height: 56px;
+    color: #FFF;
+    padding: 0px 0 0px;
+    text-align: left;
+    font-weight: 300;
 }
 
 .main-footer2 .list-info {
-  line-height: auto;
-  color: white;
-  background-size: cover;
-  background-position: bottom;
-  padding: 30px 10px 10px;
+    line-height: auto;
+    color: white;
+    background-size: cover;
+    background-position: bottom;
+    padding: 30px 10px 10px;
 }
 
 .main-footer2 .list-info h5 {
-  font-weight: 300;
-  margin-bottom: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .main-footer2 .list-info ul {
-  margin: 0 0 60px;
-  padding: 0;
+    margin: 0 0 60px;
+    padding: 0;
 }
 
 .main-footer2 .list-info ul li {
-  list-style-type: none;
-  margin: 0 0 2px;
-  padding: 0;
-  line-height: 110%;
+    list-style-type: none;
+    margin: 0 0 2px;
+    padding: 0;
+    line-height: 110%;
 }
 
 .main-footer2 .list-info a {
-  color: #FFF;
-  font-size: 14px;
-  text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 .main-footer2 .list-info p {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .main-footer2 p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 136%;
-  height: auto;
-  position: static;
+    margin: 0;
+    font-size: 14px;
+    line-height: 136%;
+    height: auto;
+    position: static;
 }
 
 .footer-pleca2 {
-  background-color: #12322B;
-  background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);
-  background-repeat: repeat-x;
+    background-color: #12322B;
+    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);
+    background-repeat: repeat-x;
 }
+
 //TERMINA GOB
+#asig .tab-content {
+    padding: 0px!important;
+}

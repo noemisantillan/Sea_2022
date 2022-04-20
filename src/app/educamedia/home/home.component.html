@@ -1,1 +1,51 @@
-<p>home works!</p>
+<app-header></app-header>
+<div class="container">
+    <!-- MENU ASIGNATURAS -->
+    <mdb-tabset #staticTabs [buttonClass]="'md-pills pills-success text-center transparent'" [justified]="true" id="asig">
+        <!--Panel 1-->
+        <mdb-tab heading="Lectura y<br> Comunicación">
+        </mdb-tab>
+        <!--Panel 2-->
+        <mdb-tab heading="Calculo y resolución de problemas">
+        </mdb-tab>
+        <!--Panel 3-->
+        <mdb-tab heading="Salud y<br> Ambiente">
+        </mdb-tab>
+        <!--Panel 4-->
+        <mdb-tab heading="Familia, Comunidad y Sociedad">
+        </mdb-tab>
+    </mdb-tabset>
+
+    <!-- Nav tabs -->
+    <mdb-tabset [buttonClass]="'pills-secondary white mb-2'" [contentClass]="'card'" class="mb-5">
+        <!--Panel 1-->
+        <mdb-tab heading="Nivel Inicial">
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        <app-tabla1></app-tabla1>
+                    </p>
+                </div>
+            </div>
+        </mdb-tab>
+        <!--Panel 2-->
+        <mdb-tab heading="Nivel Avanzado">
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.
+                    </p>
+                </div>
+            </div>
+        </mdb-tab>
+    </mdb-tabset>
+    <br><br><br>
+
+</div>
+
+
+
+<app-footer></app-footer>
