@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { EducamediaComponent } from './educamedia.component';
 
 const routes: Routes = [
   {
     path:'',
     children: [
-  { path:'inicio',component:HomeComponent},
-  { path:'**', redirectTo:'inicio'},
+  { path:':asg/:nivel',component: EducamediaComponent},
+  { path:'**', redirectTo:'/home'},
     ]
   }
 ];
