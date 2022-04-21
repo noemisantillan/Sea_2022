@@ -66,7 +66,7 @@
                             <td *ngIf="el.id_nivel == 2">{{ el.img }}</td>
                             <td *ngIf="el.id_nivel == 2">{{ el.nombre }}</td>
                             <td *ngIf="el.id_nivel == 2">{{ el.t_video }}</td>
-                            <td *ngIf="el.id_nivel == 2"><a href="{{el.googled}}" target="_blank">link</a></td>
+                            <td *ngIf="el.id_nivel == 2 and el.googled != ''"><a href="{{el.googled}}" target="_blank">link</a></td>
                         </tr>
                     </tbody>
                 </table>
