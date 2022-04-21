@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./educamedia.component.scss']
 })
 export class EducamediaComponent implements OnInit {
-
+  public checkModel = { left: true, middle: false, right: false };
+  public radioModel = 'Left';
   constructor() { }
 
   ngOnInit(): void {

@@ -1,21 +1,24 @@
 <app-header></app-header>
-<div class="container">
-    <!-- MENU ASIGNATURAS -->
-    <mdb-tabset #staticTabs [buttonClass]="'md-pills pills-success text-center transparent'" [justified]="true" id="asig">
-        <!--Panel 1-->
-        <mdb-tab heading="Lectura y <br> Comunicación"  href="hola">
-        </mdb-tab>
-        <!--Panel 2-->
-        <mdb-tab heading="Calculo y resolución de problemas">
-        </mdb-tab>
-        <!--Panel 3-->
-        <mdb-tab heading="Salud y <br> Ambiente">
-        </mdb-tab>
-        <!--Panel 4-->
-        <mdb-tab heading="Familia, Comunidad y Sociedad">
-        </mdb-tab>
-    </mdb-tabset>
-
+<div class="purple">
+    <div class="container text-center pt-5">
+        <h1>Audiovisuales para SEA</h1>
+        <div class="btn-group">
+            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Left" mdbWavesEffect>
+          Preselected
+        </label>
+            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Middle" mdbWavesEffect>
+          Radio
+        </label>
+            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Right" mdbWavesEffect>
+          Radio
+        </label>
+            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Right" mdbWavesEffect>
+            Radio
+          </label>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
     <!-- Nav tabs -->
     <mdb-tabset [buttonClass]="'pills-secondary white mb-2'" [contentClass]="'card'" class="mb-5">
         <!--Panel 1-->
