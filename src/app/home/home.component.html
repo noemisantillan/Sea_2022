@@ -15,11 +15,10 @@
     <div class="container text-center  my-4">
         <h3 class="text-unique mt-5 font-weight-bold"> Secundaria a Distancia para Adultos (SEA)</h3>
         <br>
-        <p _ngcontent-otn-c60="" class="text-center text-justify dark-grey-text">SEA es una modalidad de educación secundaria abierta y a distancia que incorpora medios específicos e innovadores, creado para que la población adulta de nuestro país que no ha concluido sus estudios de secundaria, continúe con su preparación
-            educativa.
+        <p _ngcontent-otn-c60="" class="text-center text-justify dark-grey-text">
+            Si eres mayor de 15 años y no has concluido tu Educación Básica, el Programa Secundaria a Distancia para Adultos (SEA) te permite continuar con tu preparación educativa mediante el estudio independiente de los contenidos de guías de aprendizaje y materiales audiovisuales.
         </p>
-        <p _ngcontent-otn-c60="" class="text-center text-justify dark-grey-text">Está dirigido a todas las personas jóvenes o adultas que no cursaron la educación secundaria o que, por razones de tiempo, exigencias laborales, responsabilidades familiares, o por otro motivo, no la concluyeron.</p>
-
+    
         <button mdbBtn color="default" rounded="true" (click)="openModal()">Conoce más de SEA </button>
 
     </div>
@@ -160,15 +159,15 @@
 
 <div class="container"> 
 
-<h3 class="text-center text-default mt-5 font-weight-bold"> Materiales Audiovisuales</h3>
-<p _ngcontent-otn-c60="" class="my-4 text-center text-justify dark-grey-text">SEA es una modalidad de educación secundaria abierta y a distancia que incorpora medios específicos e innovadores, creado para que la población adulta de nuestro país que no ha concluido sus estudios de secundaria, continúe con su preparación
-    educativa.
+<h3 class="text-center text-default mt-5 font-weight-bold"> Materiales Audiovisuales SEA</h3>
+<p _ngcontent-otn-c60="" class="my-4 text-center text-justify dark-grey-text">
+    Si eres mayor de 15 años y no has concluido tu Educación Básica, el Programa Secundaria a Distancia para Adultos (SEA) te permite continuar con tu preparación educativa mediante el estudio independiente de los contenidos de guías de aprendizaje y materiales audiovisuales
 </p>
 
     <div class="row">
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-3 col-sm-6 mt-1">
             <a [routerLink]="['/audiovisuales/lyc']" routerLinkActive="router-link-active" >
-                <div class="card">
+                <div class="card" style="height: 120px;">
                     <div class="card-body-3">
                         <h5 class="card-title text-white font-weight-bold mt-2">
                             <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="book-open"></mdb-icon></span>
@@ -179,9 +178,9 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-3 col-sm-6 mt-1">
             <a [routerLink]="['/audiovisuales/cyrp']" routerLinkActive="router-link-active" >
-                <div class="card">
+                <div class="card" style="height: 120px;">
                     <div class="card-body-2">
                         <h5 class="card-title text-white font-weight-bold mt-2">
                             <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="pen"></mdb-icon></span>
@@ -192,9 +191,9 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-3 col-sm-6 mt-1">
             <a [routerLink]="['/audiovisuales/sya']" routerLinkActive="router-link-active" >
-                <div class="card">
+                <div class="card" style="height: 120px;">
                     <div class="card-body-4">
                         <h5 class="card-title text-white font-weight-bold mt-2">
                             <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="briefcase-medical"></mdb-icon></span>
@@ -205,11 +204,11 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-3 col-sm-6 mt-1">
             <a [routerLink]="['/audiovisuales/fcys']" routerLinkActive="router-link-active" >
-                <div class="card">
+                <div class="card" style="height: 120px;">
                     <div class="card-body-5">
-                        <h5 class="card-title text-white  mt-2">
+                        <h5 class="card-title text-white font-weight-bold mt-2">
                             <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="laugh"></mdb-icon></span>
                             Familia, Comunidad y Sociedad </h5>
                     </div>
@@ -233,9 +232,10 @@
 
             <!-- Post title -->
             <h3 class="font-weight-bold  text-unique mb-3"><strong>Calendario SEA</strong></h3>
+            <br>
             <!-- Excerpt -->
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-
+            <br>
             <!-- Read mosre button -->
             <button mdbBtn type="button" color="default-3" rounded="true" mdbWavesEffect>Descargar Calendario</button>
 
@@ -246,11 +246,8 @@
         <div class="col-lg-5">
 
             <!-- Featured image -->
-            <div class="view overlay rounded z-depth-2">
+            <div>
                 <img class="img-fluid" src="../../assets/img/calendar.png" alt="Sample image">
-                <a>
-                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                </a>
             </div>
 
         </div>

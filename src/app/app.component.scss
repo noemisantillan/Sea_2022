@@ -1,0 +1,85 @@
+
+.card {
+    border:none;
+}
+
+
+.card-body-2 {
+    /* fallback for old browsers */
+    background: #6674c6;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(102, 116, 198, 1), rgba(112, 190, 216, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(102, 116, 198, 1), rgba(112, 190, 216, 1));
+  
+      flex: 1 1 auto;
+      min-height: 1px;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      border:none;
+      box-shadow: none;
+  
+  }
+  
+  .card-body-3 {
+    /* fallback for old browsers */
+    background: #68caba;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, rgba(104, 202, 186, 1), rgba(64, 154, 176, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, rgba(104, 202, 186, 1), rgba(64, 154, 176, 1));
+    
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+        border:none;
+        box-shadow: none;
+    
+    }
+  
+    .card-body-4 {
+    /* fallback for old browsers */
+    background: #ff976b;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, rgba(255, 151, 107, 1), rgba(183, 114, 202, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, rgba(255, 151, 107, 1), rgba(183, 114, 202, 1));
+      
+          flex: 1 1 auto;
+          min-height: 1px;
+          padding: 1.25rem;
+          border-radius: 0.75rem;
+          border:none;
+          box-shadow: none;
+      
+      }
+  
+      .card-body-5 {
+    /* fallback for old browsers */
+    background: #6971dd;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(146, 113, 219), rgb(211, 150, 223));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(146, 113, 219), rgb(211, 150, 223));
+            
+                flex: 1 1 auto;
+                min-height: 1px;
+                padding: 1.25rem;
+                border-radius: 0.75rem;
+                border:none;
+                box-shadow: none;
+            
+            }
+  
+  .gradient-1 {
+      color: rgba(255, 255, 255, 0.777) !important;
+  }

@@ -1,21 +1,72 @@
 <app-header></app-header>
-<div class="purple">
-    <div class="container text-center pt-5">
-        <h1>Audiovisuales para SEA</h1>
-        <p class="d-inline-block  text-white px-4" style="display: contents;"><a href="#">Inicio /</a></p>
+
+<div class= "container text-muted mt-3">
+    <mdb-breadcrumb customClass="indigo lighten-5">
+      <mdb-breadcrumb-item [routerLink]="['/home']" routerLinkActive="router-link-active" >SEA</mdb-breadcrumb-item>
+      <mdb-breadcrumb-item class="active">Materiales Audiovisuales</mdb-breadcrumb-item>
+    </mdb-breadcrumb>
+  </div>
+
+<div>
+    <div class="container">
+        <h1 class="text-center text-default font-weight-bold my-5">Materiales Audiovisuales SEA</h1>
+
         <div class="btn-group">
-            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Left" mdbWavesEffect (click)="ruta(1)">
-                Lengua y Comunicación
-            </label>
-                <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Middle" mdbWavesEffect (click)="ruta(2)">
-                    Calculo y Resolución de Problemas
-            </label>
-                <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Middle2" mdbWavesEffect (click)="ruta(3)">
-                   Salud y Ambiente   
-            </label>
-                <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Right" mdbWavesEffect (click)="ruta(4)">
-                    Familia, Comunidad y Sociendad
-              </label>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mt-1">
+                    <a [routerLink]="['/audiovisuales/lyc']" (click)="ruta(1)">
+                        <div class="card" style="height: 120px;">
+                            <div class="card-body-3">
+                                <h5 class="card-title text-white font-weight-bold mt-2">
+                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="book-open"></mdb-icon></span>
+                                    Lengua y Comunicación </h5>
+                            </div>
+                        </div>
+        
+                    </a>
+                </div>
+        
+                <div class="col-lg-3 col-sm-6 mt-1">
+                    <a [routerLink]="['/audiovisuales/cyrp']" (click)="ruta(2)">
+                        <div class="card" style="height: 120px; ">
+                            <div class="card-body-2" >
+                                <h5 class="card-title text-white font-weight-bold mt-2">
+                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="pen"></mdb-icon></span>
+                                    Cálculo y Resolución de Problemas </h5>
+                            </div>
+                        </div>
+        
+                    </a>
+                </div>
+        
+                <div class="col-lg-3 col-sm-6 mt-1">
+                    <a [routerLink]="['/audiovisuales/sya']" (click)="ruta(3)">
+                        <div class="card" style="height: 120px;">
+                            <div class="card-body-4">
+                                <h5 class="card-title text-white font-weight-bold mt-2">
+                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="briefcase-medical"></mdb-icon></span>
+                                    Salud y ambiente  </h5>
+                            </div>
+                        </div>
+        
+                    </a>
+                </div>
+        
+                <div class="col-lg-3 col-sm-6 mt-1">
+                    <a [routerLink]="['/audiovisuales/fcys']" (click)="ruta(4)">
+                        <div class="card" style="height: 120px;">
+                            <div class="card-body-5">
+                                <h5 class="card-title text-white font-weight-bold mt-2">
+                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="laugh"></mdb-icon></span>
+                                    Familia, Comunidad y Sociedad </h5>
+                            </div>
+                        </div>
+        
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
