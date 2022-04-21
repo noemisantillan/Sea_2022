@@ -12,4 +12,8 @@ export class EducamediaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ruta(){
+    console.log("ruta");
+  }
+
 }
