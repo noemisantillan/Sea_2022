@@ -6,8 +6,8 @@ const routes: Routes = [
   {
     path:'',
     children: [
-  { path:':asg/:nivel',component: EducamediaComponent},
-  { path:'**', redirectTo:'lyc/inicial'},
+  { path:':asg',component: EducamediaComponent},
+  { path:'**', redirectTo:'lyc'},
     ]
   }
 ];

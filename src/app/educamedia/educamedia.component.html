@@ -4,49 +4,79 @@
         <h1>Audiovisuales para SEA</h1>
         <p class="d-inline-block  text-white px-4" style="display: contents;"><a href="#">Inicio /</a></p>
         <div class="btn-group">
-            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Left" mdbWavesEffect>
-          Preselected
-        </label>
-            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Middle" mdbWavesEffect>
-          Radio
-        </label>
-            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Right" mdbWavesEffect>
-          Radio
-        </label>
-            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Right" mdbWavesEffect>
-            Radio
-          </label>
+            <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Left" mdbWavesEffect (click)="ruta(1)">
+                Lengua y Comunicación
+            </label>
+                <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Middle" mdbWavesEffect (click)="ruta(2)">
+                    Calculo y Resolución de Problemas
+            </label>
+                <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Middle2" mdbWavesEffect (click)="ruta(3)">
+                   Salud y Ambiente   
+            </label>
+                <label mdbBtn color="light-blue" [(ngModel)]="radioModel" mdbRadio="Right" mdbWavesEffect (click)="ruta(4)">
+                    Familia, Comunidad y Sociendad
+              </label>
         </div>
     </div>
 </div>
 <div class="container mt-5">
-    <!-- Nav tabs -->
-    <mdb-tabset [buttonClass]="'pills-secondary white mb-2'" [contentClass]="'card'" class="mb-5">
-        <!--Panel 1-->
-        <mdb-tab heading="Nivel Inicial">
-            <div class="row">
-                <div class="col-12">
-                    <p>
-                        <app-tabla1></app-tabla1>
-                    </p>
-                </div>
+     <!-- Nav tabs -->
+ <mdb-tabset [buttonClass]="'pills-secondary white mb-2'" [contentClass]="'card'" class="mb-5">
+    <!--Panel 1-->
+    <mdb-tab heading="Nivel Inicial">
+        <div class="row">
+            <div class="col-12">
+                <table id="tableSortExample" mdbTable class="z-depth-1">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{ head | titlecase }}
+                                <mdb-icon fas icon="sort"></mdb-icon>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let el of elements; let i = index" >
+                            <th scope="row" *ngIf="el.id_nivel == 1">{{ el.sesion }}</th>
+                            <td *ngIf="el.id_nivel == 1">{{ el.img }}</td>
+                            <td *ngIf="el.id_nivel == 1">{{ el.nombre }}</td>
+                            <td *ngIf="el.id_nivel == 1">{{ el.t_video }}</td>
+                            <td *ngIf="el.id_nivel == 1"><a href="{{el.googled}}" target="_blank">link</a></td>
+                      
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </mdb-tab>
-        <!--Panel 2-->
-        <mdb-tab heading="Nivel Avanzado">
-            <div class="row">
-                <div class="col-12">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.
-                    </p>
-                </div>
+        </div>
+    </mdb-tab>
+    <!--Panel 2-->
+    <mdb-tab heading="Nivel Avanzado">
+        <div class="row">
+            <div class="col-12">
+                <table id="tableSortExample" mdbTable class="z-depth-1">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{ head | titlecase }}
+                                <mdb-icon fas icon="sort"></mdb-icon>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let el of elements; let i = index" >
+                            <th scope="row" *ngIf="el.id_nivel == 2">{{ el.sesion }}</th>
+                            <td *ngIf="el.id_nivel == 2">{{ el.img }}</td>
+                            <td *ngIf="el.id_nivel == 2">{{ el.nombre }}</td>
+                            <td *ngIf="el.id_nivel == 2">{{ el.t_video }}</td>
+                            <td *ngIf="el.id_nivel == 2"><a href="{{el.googled}}" target="_blank">link</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </mdb-tab>
-    </mdb-tabset>
-    <br><br><br>
+        </div>
+    </mdb-tab>
+</mdb-tabset>
+<br><br><br>
+
+
 
 </div>
 
