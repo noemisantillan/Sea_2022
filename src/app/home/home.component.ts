@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit {
       focus: true,
       show: true,
       ignoreBackdropClick: true,
-      class: 'modal-fluid modal-full-weight modal-top',
-      containerClass: 'right',
+      class: 'modal-lg modal-full-height modal-top',
+      containerClass: 'center',
       animated: true
 
   });

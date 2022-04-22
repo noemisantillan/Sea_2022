@@ -88,7 +88,7 @@
                     <tbody>
                         <tr *ngFor="let el of elements; let i = index" >
                             <th scope="row" *ngIf="el.id_nivel == 1">{{ el.sesion }}</th>
-                            <td *ngIf="el.id_nivel == 1">{{ el.img }}</td>
+                            <!--<td *ngIf="el.id_nivel == 1">{{ el.img }}</td>-->
                             <td *ngIf="el.id_nivel == 1">{{ el.nombre }}</td>
                             <td *ngIf="el.id_nivel == 1">{{ el.t_video }}</td>
                             <td *ngIf="el.id_nivel == 1"><a href="{{el.googled}}" target="_blank">link</a></td>
@@ -114,7 +114,7 @@
                     <tbody>
                         <tr *ngFor="let el of elements; let i = index" >
                             <th scope="row" *ngIf="el.id_nivel == 2">{{ el.sesion }}</th>
-                            <td *ngIf="el.id_nivel == 2">{{ el.img }}</td>
+                            <!--<td *ngIf="el.id_nivel == 2">{{ el.img }}</td>-->
                             <td *ngIf="el.id_nivel == 2">{{ el.nombre }}</td>
                             <td *ngIf="el.id_nivel == 2">{{ el.t_video }}</td>
                             <td *ngIf="el.id_nivel == 2 and el.googled != ''"><a href="{{el.googled}}" target="_blank">link</a></td>
