@@ -5,7 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class VideosService {
-  private url = 'http://10.3.83.128/22-Sea_2022/php/';
+  //private url = 'http://10.3.83.128/22-Sea_2022/php/';
+  private url = './php/';
 
   constructor(private http: HttpClient) { }
 

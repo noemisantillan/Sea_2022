@@ -14,6 +14,7 @@ export class EducamediaComponent implements OnInit {
   public asg: string;
   headElements = ['Sesión', 'Nombre', 'tipo de video', 'Link'];
   elements: any = [];
+  nombre: string;
   constructor(private router:Router,  private rutas: ActivatedRoute, private videoservice: VideosService) {
     this.rutas.params.subscribe(
       parametros => {
@@ -22,6 +23,7 @@ export class EducamediaComponent implements OnInit {
     );
     switch (this.asg){
       case "lyc":
+        this.nombre = "Lengua y Comunicación";
         //this.ruta(1);
         this.buscaAsg(1);
         //this.checkModel = { left: true, middle: false, middle2: false, right: false };
@@ -31,6 +33,7 @@ export class EducamediaComponent implements OnInit {
       case "cyrp":
         //this.ruta(2);
         this.buscaAsg(2);
+        this.nombre = "Cálculo y Resolución de Problemas";
         //this.checkModel = { left: false, middle: true, middle2: false, right: false };
         //this.radioModel = 'middle';
         
@@ -38,6 +41,7 @@ export class EducamediaComponent implements OnInit {
       case "sya":
         //this.ruta(3);
         this.buscaAsg(3);
+        this.nombre = "Salud y Ambiente";
         //this.checkModel = { left: false, middle: false, middle2: true, right: false };
         //this.radioModel = 'middle2';
         
@@ -45,6 +49,7 @@ export class EducamediaComponent implements OnInit {
       case "fcys":
         //this.ruta(4);
         this.buscaAsg(4);
+        this.nombre = "Familia, Comunidad y Sociedad";
         //this.checkModel = { left: false, middle: false, middle2: false, right: true };
         //this.radioModel = 'right';
         
@@ -61,22 +66,22 @@ export class EducamediaComponent implements OnInit {
       case 1:
         this.buscaAsg(1);
         this.router.navigate(['/audiovisuales/lyc']);
-        
+        this.nombre = "Lengua y Comunicación";
       break;
       case 2:
         this.buscaAsg(2);
         this.router.navigate(['/audiovisuales/cyrp']);
-        
+        this.nombre = "Cálculo y Resolución de Problemas";
       break;
       case 3:
         this.buscaAsg(3);
         this.router.navigate(['/audiovisuales/sya']);
-        
+        this.nombre = "Salud y Ambiente";
       break;
       case 4:
         this.buscaAsg(4);
         this.router.navigate(['/audiovisuales/fcys']);
-        
+        this.nombre = "Familia, Comunidad y Sociedad";
       break;
     }
     
