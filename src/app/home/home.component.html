@@ -144,7 +144,7 @@
                             <!--Text-->
                             <button mdbBtn type="button" color="default-3" rounded="true" mdbWavesEffect [routerLink]="['/coordinadores/sede']" routerLinkActive="router-link-active">Instalar una sede SEA</button>
                             <br>
-                            <button mdbBtn type="button" color="default-2" rounded="true" mdbWavesEffect [routerLink]="['/coordinadores/documentos']" routerLinkActive="router-link-active">Lista de documentos</button>
+                            <a mdbBtn type="button" color="default-2" rounded="true" href="https://drive.google.com/drive/folders/10QALBrWSWmqyTnICTnB2hpuKJf-W38vB?usp=sharing">Difunde SEA</a>
                         </mdb-card-body>
                     </mdb-card>
                 </div>
@@ -161,7 +161,7 @@
 
 <h3 class="text-center text-default mt-5 font-weight-bold"> Materiales Audiovisuales SEA</h3>
 <p _ngcontent-otn-c60="" class="my-4 text-center text-justify dark-grey-text">
-    Complementa su aprendizaje con los materiales audiovisuales que tenemos para ti, selecciona la asignatura que estas cursando:
+    Complementa tu aprendizaje con los materiales audiovisuales que tenemos para ti, selecciona la asignatura de tu interés:
 </p>
 
     <div class="row">
@@ -197,7 +197,7 @@
                     <div class="card-body-4">
                         <h5 class="card-title text-white font-weight-bold mt-2">
                             <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="briefcase-medical"></mdb-icon></span>
-                            Salud y ambiente  </h5>
+                            Salud y Ambiente  </h5>
                     </div>
                 </div>
 
@@ -236,13 +236,21 @@
             <!-- Excerpt -->
             <p>Descarga el calendario escolar de SEA y conoce las fechas de los ciclos, inscripciones, exámenes y más. </p>
             <!-- Read mosre button -->
-            <a mdbBtn type="button" color="default-3" rounded="true" href="https://sea.sep.gob.mx/docs/documentos/2022/CalendarioSEA_2022.pdf" mdbWavesEffect target="_blank">Descarga el Calendario</a>
+            <a href="assets/doc/2022/CalendarioSEA_2022.pdf" target="_blank">
+                <button mdbBtn type="button" color="default-3" rounded="true" src="" mdbWavesEffect >Descarga el Calendario</button>
+            </a>
+
 <br>
 <br>
             <!-- Excerpt -->
-            <p>Consulta la programación de actividades para la evaluación y expedición de Certificados SEA 2022 </p>
+            <p>Consulta la programación de actividades para la evaluación y expedición de Certificados SEA 2022.</p>
             <!-- Read mosre button -->
-            <a mdbBtn type="button" color="default" rounded="true" href="https://sea.sep.gob.mx/docs/documentos/2022/SEA_Calendario_Evaluaciones_2022.pdf" mdbWavesEffect target="_blank">Consulta la programación</a>
+            <a href="" target="_blank">
+                <a mdbBtn type="button" color="default-2" rounded="true" mdbWavesEffect >Consulta la programación</a>
+            </a>
+
+
+
 
         </div>
         <!-- Grid column -->
@@ -259,12 +267,13 @@
         <!-- Grid column -->
 
     </div>
-
     <!-- Grid row -->
 
 </section>
 
 <hr class="container">
+
+
 
 <!--Contact-->
 <div class="container">
