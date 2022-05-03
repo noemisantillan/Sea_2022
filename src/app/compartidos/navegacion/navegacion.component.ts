@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-navegacion',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavegacionComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router:Router) { }
+  nombre: string;
   ngOnInit(): void {
+  }
+
+  ruta(id){
+    switch (id){
+      case 1:
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>this.router.navigate(['/audiovisuales/lyc']));
+      break;
+      case 2:
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>this.router.navigate(['/audiovisuales/cyrp']));
+      break;
+      case 3:
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>this.router.navigate(['/audiovisuales/sya']));
+      break;
+      case 4:
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>this.router.navigate(['/audiovisuales/fcys']));
+      break;
+    }
+    
   }
 
 }

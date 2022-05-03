@@ -93,7 +93,7 @@
                             <!--<td *ngIf="el.id_nivel == 1">{{ el.img }}</td>-->
                             <td *ngIf="el.id_nivel == 1">{{ el.nombre }}</td>
                             <td *ngIf="el.id_nivel == 1">{{ el.t_video }}</td>
-                            <td *ngIf="el.id_nivel == 1"><a href="{{el.googled}}" target="_blank"><mdb-icon fas icon="play-circle" size="2x" class="indigo-text pr-3"></mdb-icon></a></td>  
+                            <td *ngIf="el.id_nivel == 1"><a *ngIf="el.googled" href="{{el.googled}}" target="_blank"><mdb-icon fas icon="play-circle" size="2x" class="indigo-text pr-3"></mdb-icon></a></td>  
                       
                         </tr>
                     </tbody>
@@ -119,7 +119,9 @@
                             <!--<td *ngIf="el.id_nivel == 2">{{ el.img }}</td>-->
                             <td *ngIf="el.id_nivel == 2">{{ el.nombre }}</td>
                             <td *ngIf="el.id_nivel == 2">{{ el.t_video }}</td>
-                            <td *ngIf="el.id_nivel == 2 and el.googled != ''"><a href="{{el.googled}}" target="_blank"><mdb-icon fas icon="play-circle" size="2x" class="cyan-text pr-3"></mdb-icon></a></td>
+                            <td *ngIf="el.id_nivel == 2">
+                                <a *ngIf="el.googled" href="{{el.googled}}" target="_blank"><mdb-icon fas icon="play-circle" size="2x" class="cyan-text pr-3"></mdb-icon></a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

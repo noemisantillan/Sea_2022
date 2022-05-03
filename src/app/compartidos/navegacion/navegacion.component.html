@@ -38,7 +38,7 @@
                   Coordinadores Estatales<span class="caret"></span></a>
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
                   <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/coordinadores/sede']" routerLinkActive="router-link-active">¿Cómo puedo instalar una sede SEA?</a>
-                  <a class="dropdown-item waves-light" href="https://drive.google.com/drive/folders/10QALBrWSWmqyTnICTnB2hpuKJf-W38vB?usp=sharing">Difunde SEA</a>
+                  <a class="dropdown-item waves-light" href="https://drive.google.com/drive/folders/10QALBrWSWmqyTnICTnB2hpuKJf-W38vB?usp=sharing" target="_blank">Difunde SEA</a>
                 </div>
               </li>
   
@@ -47,10 +47,10 @@
           <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
             Materiales Audiovisuales<span class="caret"></span></a>
           <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/audiovisuales/lyc']" routerLinkActive="router-link-active">Lengua y Comunicación</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/audiovisuales/cyrp']" routerLinkActive="router-link-active">Cálculo y Resolución de Problemas</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/audiovisuales/sya']" routerLinkActive="router-link-active">Salud y Ambiente</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/audiovisuales/fcys']" routerLinkActive="router-link-active">Familia, Comunidad y Sociedad</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect (click)="ruta(1)">Lengua y Comunicación</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect (click)="ruta(2)">Cálculo y Resolución de Problemas</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect (click)="ruta(3)">Salud y Ambiente</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect (click)="ruta(4)">Familia, Comunidad y Sociedad</a>
           </div>
         </li>
 
