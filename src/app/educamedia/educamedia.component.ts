@@ -11,6 +11,17 @@ import { VideosService } from '../services/videos.service';
 export class EducamediaComponent implements OnInit {
   //public checkModel = { left: true, middle: false, middle2: false, right: false };
   //public radioModel = 'left';
+  options = [
+    { value: '1', label: 'Nivel Inicial' },
+    { value: '2', label: 'Nivel Avanzado' },
+  ];
+  asignatura = [
+    { value: '1', label: 'Apoyo Tematico' },
+    { value: '2', label: 'Recapitulación Semanal' },
+ 
+  ];
+ 
+
   public asg: string;
   headElements = ['Sesión', 'Nombre', 'tipo de video', 'Link'];
   elements: any = [];

@@ -1,13 +1,13 @@
 <app-header></app-header>
 <app-navegacion></app-navegacion>
 
-<div class= "container text-muted mt-3">
+<div class="container text-muted mt-3">
     <mdb-breadcrumb customClass="indigo lighten-5">
-      <mdb-breadcrumb-item [routerLink]="['/home']" routerLinkActive="router-link-active" >SEA</mdb-breadcrumb-item>
-      <mdb-breadcrumb-item class="active">Materiales Audiovisuales</mdb-breadcrumb-item>
-      <mdb-breadcrumb-item class="active">{{nombre}}</mdb-breadcrumb-item>
+        <mdb-breadcrumb-item [routerLink]="['/home']" routerLinkActive="router-link-active">SEA</mdb-breadcrumb-item>
+        <mdb-breadcrumb-item class="active">Materiales Audiovisuales</mdb-breadcrumb-item>
+        <mdb-breadcrumb-item class="active">{{nombre}}</mdb-breadcrumb-item>
     </mdb-breadcrumb>
-  </div>
+</div>
 
 <div>
     <div class="container">
@@ -21,50 +21,46 @@
                         <div class="card" style="height: 120px;">
                             <div class="card-body-3">
                                 <h5 class="card-title text-white font-weight-bold mt-2">
-                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="book-open"></mdb-icon></span>
-                                    Lengua y Comunicación </h5>
+                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="book-open"></mdb-icon></span> Lengua y Comunicación </h5>
                             </div>
                         </div>
-        
+
                     </a>
                 </div>
-        
+
                 <div class="col-lg-3 col-sm-6 mt-1">
                     <a [routerLink]="['/audiovisuales/cyrp']" (click)="ruta(2)">
                         <div class="card" style="height: 120px; ">
-                            <div class="card-body-2" >
+                            <div class="card-body-2">
                                 <h5 class="card-title text-white font-weight-bold mt-2">
-                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="pen"></mdb-icon></span>
-                                    Cálculo y Resolución de Problemas </h5>
+                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="pen"></mdb-icon></span> Cálculo y Resolución de Problemas </h5>
                             </div>
                         </div>
-        
+
                     </a>
                 </div>
-        
+
                 <div class="col-lg-3 col-sm-6 mt-1">
                     <a [routerLink]="['/audiovisuales/sya']" (click)="ruta(3)">
                         <div class="card" style="height: 120px;">
                             <div class="card-body-4">
                                 <h5 class="card-title text-white font-weight-bold mt-2">
-                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="briefcase-medical"></mdb-icon></span>
-                                    Salud y Ambiente  </h5>
+                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="briefcase-medical"></mdb-icon></span> Salud y Ambiente </h5>
                             </div>
                         </div>
-        
+
                     </a>
                 </div>
-        
+
                 <div class="col-lg-3 col-sm-6 mt-1">
                     <a [routerLink]="['/audiovisuales/fcys']" (click)="ruta(4)">
                         <div class="card" style="height: 120px;">
                             <div class="card-body-5">
                                 <h5 class="card-title text-white font-weight-bold mt-2">
-                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="laugh"></mdb-icon></span>
-                                    Familia, Comunidad y Sociedad </h5>
+                                    <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="laugh"></mdb-icon></span> Familia, Comunidad y Sociedad </h5>
                             </div>
                         </div>
-        
+
                     </a>
                 </div>
             </div>
@@ -73,63 +69,93 @@
     </div>
 </div>
 <div class="container mt-5">
-     <!-- Nav tabs -->
- <mdb-tabset [buttonClass]="'pills-secondary white mb-2'" [contentClass]="'card'" class="mb-5">
-    <!--Panel 1-->
-    <mdb-tab heading="Nivel Inicial" >
-        <div class="row">
-            <div class="col-12">
-                <table id="tableSortExample" mdbTable class="z-depth-1">
-                    <thead>
-                        <tr>
-                            <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{ head | titlecase }}
+
+    <div class="row">
+        <div class="col-xs-5 col-md-5 col-lg-5">
+            <div class="md-form">
+                <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Nivel" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
+                    <mdb-select-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</mdb-select-option>
+                </mdb-select-2>
+            </div>
+        </div>
+        <div class="col-xs-5 col-md-5 col-lg-5">
+            <div class="md-form">
+                <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Tipo de Video">
+                    <mdb-select-option *ngFor="let asignaturas of asignatura" [value]="asignaturas.value">{{ asignaturas.label }}</mdb-select-option>
+                </mdb-select-2>
+            </div>
+        </div>
+        <div class="col-xs-2 col-md-2 col-lg-2">
+            <div class="md-form text-center">
+                <button mdbBtn type="button" color="default" outline="true" size="lg" mdbWavesEffect>Buscar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav tabs 
+    <mdb-tabset [buttonClass]="'pills-secondary white mb-2'" [contentClass]="'card'" class="mb-5">
+      
+        <mdb-tab heading="Nivel Inicial">
+            <div class="row">
+                <div class="col-12">
+                    <table id="tableSortExample" mdbTable class="z-depth-1">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{ head | titlecase }}
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let el of elements; let i = index">
+                                <th scope="row" *ngIf="el.id_nivel == 1">{{ el.sesion }}</th>
+                              
+                                <td *ngIf="el.id_nivel == 1">{{ el.nombre }}</td>
+                                <td *ngIf="el.id_nivel == 1">{{ el.t_video }}</td>
+                                <td *ngIf="el.id_nivel == 1">
+                                    <a *ngIf="el.googled" href="{{el.googled}}" target="_blank">
+                                        <mdb-icon fas icon="play-circle" size="2x" class="indigo-text pr-3"></mdb-icon>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </mdb-tab>
+      
+        <mdb-tab heading="Nivel Avanzado">
+            <div class="row">
+                <div class="col-12">
+                    <table id="tableSortExample" mdbTable class="z-depth-1">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{ head | titlecase }}
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let el of elements; let i = index">
+                                <th scope="row" *ngIf="el.id_nivel == 2">{{ el.sesion }}</th>
                                
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let el of elements; let i = index" >
-                            <th scope="row" *ngIf="el.id_nivel == 1">{{ el.sesion }}</th>
-                            <!--<td *ngIf="el.id_nivel == 1">{{ el.img }}</td>-->
-                            <td *ngIf="el.id_nivel == 1">{{ el.nombre }}</td>
-                            <td *ngIf="el.id_nivel == 1">{{ el.t_video }}</td>
-                            <td *ngIf="el.id_nivel == 1"><a *ngIf="el.googled" href="{{el.googled}}" target="_blank"><mdb-icon fas icon="play-circle" size="2x" class="indigo-text pr-3"></mdb-icon></a></td>  
-                      
-                        </tr>
-                    </tbody>
-                </table>
+                                <td *ngIf="el.id_nivel == 2">{{ el.nombre }}</td>
+                                <td *ngIf="el.id_nivel == 2">{{ el.t_video }}</td>
+                                <td *ngIf="el.id_nivel == 2">
+                                    <a *ngIf="el.googled" href="{{el.googled}}" target="_blank">
+                                        <mdb-icon fas icon="play-circle" size="2x" class="cyan-text pr-3"></mdb-icon>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-    </mdb-tab>
-    <!--Panel 2-->
-    <mdb-tab heading="Nivel Avanzado">
-        <div class="row">
-            <div class="col-12">
-                <table id="tableSortExample" mdbTable class="z-depth-1">
-                    <thead>
-                        <tr>
-                            <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{ head | titlecase }}
-                                
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let el of elements; let i = index" >
-                            <th scope="row" *ngIf="el.id_nivel == 2">{{ el.sesion }}</th>
-                            <!--<td *ngIf="el.id_nivel == 2">{{ el.img }}</td>-->
-                            <td *ngIf="el.id_nivel == 2">{{ el.nombre }}</td>
-                            <td *ngIf="el.id_nivel == 2">{{ el.t_video }}</td>
-                            <td *ngIf="el.id_nivel == 2">
-                                <a *ngIf="el.googled" href="{{el.googled}}" target="_blank"><mdb-icon fas icon="play-circle" size="2x" class="cyan-text pr-3"></mdb-icon></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </mdb-tab>
-</mdb-tabset>
-<br><br><br>
+        </mdb-tab>
+    </mdb-tabset>
+    -->
+    <br><br><br> <br><br><br> <br><br><br>
 
 
 
