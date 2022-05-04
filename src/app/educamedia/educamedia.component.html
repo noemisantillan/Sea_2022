@@ -68,31 +68,72 @@
         </div>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
 
-    <div class="row">
-        <div class="col-xs-5 col-md-5 col-lg-5">
-            <div class="md-form">
-                <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Nivel" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
-                    <mdb-select-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</mdb-select-option>
-                </mdb-select-2>
+    <form autocomplete="off" [formGroup]="forma" (ngSubmit)="buscar()">
+        <div class="row">
+            <div class="col-xs-5 col-md-5 col-lg-5">
+                <div class="md-form">
+                    <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Nivel" formControlName="nivel" >
+                        <mdb-select-option *ngFor="let option of nivel" [value]="option.value" >{{ option.label }}</mdb-select-option>
+                    </mdb-select-2>
+                    <small  class="text-danger" *ngIf="nivelNoValido">
+                        Elige una opción
+                    </small>
+                </div>
+            </div>
+            <div class="col-xs-5 col-md-5 col-lg-5">
+                <div class="md-form">
+                    <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Tipo de Video" formControlName="video" >
+                        <mdb-select-option *ngFor="let opt of video" [value]="opt.value">{{ opt.label }}</mdb-select-option>
+                    </mdb-select-2>
+                    <small  class="text-danger"  *ngIf="videoNoValido">
+                        Elige una opción
+                    </small>
+                </div>
+            </div>
+            <div class="col-xs-2 col-md-2 col-lg-2">
+                <div class="md-form text-center">
+                    <button mdbBtn type="submit" color="default" outline="true" size="lg" mdbWavesEffect>Buscar</button>
+                </div>
             </div>
         </div>
-        <div class="col-xs-5 col-md-5 col-lg-5">
-            <div class="md-form">
-                <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Tipo de Video">
-                    <mdb-select-option *ngFor="let asignaturas of asignatura" [value]="asignaturas.value">{{ asignaturas.label }}</mdb-select-option>
-                </mdb-select-2>
-            </div>
-        </div>
-        <div class="col-xs-2 col-md-2 col-lg-2">
-            <div class="md-form text-center">
-                <button mdbBtn type="button" color="default" outline="true" size="lg" mdbWavesEffect>Buscar</button>
-            </div>
-        </div>
-    </div>
+    </form>
 
-    <!-- Nav tabs 
+    <table id="tableSortExample" mdbTable class="z-depth-1 mb-5" *ngIf="id_nivel and id_video">
+        <thead>
+            <tr>
+                <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{ head | titlecase }}
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let el of elements; let i = index">
+                <th scope="row" >{{ el.sesion }}</th>
+              
+                <td >{{ el.nombre }}</td>
+                <td >{{ el.t_video }}</td>
+                <td >
+                    <a *ngIf="el.googled" href="{{el.googled}}" target="_blank">
+                        <mdb-icon fas icon="play-circle" size="2x" class="indigo-text pr-3"></mdb-icon>
+                    </a>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+   
+
+
+
+</div>
+
+
+
+<app-footer></app-footer>
+
+ <!-- Nav tabs 
     <mdb-tabset [buttonClass]="'pills-secondary white mb-2'" [contentClass]="'card'" class="mb-5">
       
         <mdb-tab heading="Nivel Inicial">
@@ -155,12 +196,4 @@
         </mdb-tab>
     </mdb-tabset>
     -->
-    <br><br><br> <br><br><br> <br><br><br>
-
-
-
-</div>
-
-
-
-<app-footer></app-footer>
+   

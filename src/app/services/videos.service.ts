@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class VideosService {
   private url = 'https://sea.sep.gob.mx/php/';
+  //private url = 'http://localhost/22-Sea_2022/php/';
   //private url = './php/';
 
   constructor(private http: HttpClient) { }

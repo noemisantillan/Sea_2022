@@ -14,9 +14,11 @@ if(!$data){
   $data = json_decode($data, true);
   //asignacion de datos en variables
   $asg = $data['asg'];
+  $nivel = $data['nivel'];
+  $video = $data['video'];
 
   include 'conecta.php';
-  $q = "SELECT * FROM `sea-audiovisuales`.cont_videos inner join`sea-audiovisuales`. t_video on t_video.id_tvideo = cont_videos.id_tipo_v where id_asg =".$asg."
+  $q = "SELECT * FROM `sea-audiovisuales`.cont_videos inner join`sea-audiovisuales`. t_video on t_video.id_tvideo = cont_videos.id_tipo_v where id_asg =".$asg." and id_nivel =".$nivel." and id_tipo_v =".$video."
   order by idvideos;" ;
   
   $conn	=	conecta_bd();
