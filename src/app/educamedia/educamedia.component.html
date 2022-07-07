@@ -74,20 +74,20 @@
         <div class="row">
             <div class="col-xs-5 col-md-5 col-lg-5">
                 <div class="md-form">
-                    <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Nivel" formControlName="nivel" >
-                        <mdb-select-option *ngFor="let option of nivel" [value]="option.value" >{{ option.label }}</mdb-select-option>
+                    <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Nivel" formControlName="nivel">
+                        <mdb-select-option *ngFor="let option of nivel" [value]="option.value">{{ option.label }}</mdb-select-option>
                     </mdb-select-2>
-                    <small  class="text-danger" *ngIf="nivelNoValido">
+                    <small class="text-danger" *ngIf="nivelNoValido">
                         Elige una opción
                     </small>
                 </div>
             </div>
             <div class="col-xs-5 col-md-5 col-lg-5">
                 <div class="md-form">
-                    <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Tipo de Video" formControlName="video" >
+                    <mdb-select-2 placeholder="Elige una opción" label="Selecciona un Tipo de Video" formControlName="video">
                         <mdb-select-option *ngFor="let opt of video" [value]="opt.value">{{ opt.label }}</mdb-select-option>
                     </mdb-select-2>
-                    <small  class="text-danger"  *ngIf="videoNoValido">
+                    <small class="text-danger" *ngIf="videoNoValido">
                         Elige una opción
                     </small>
                 </div>
@@ -110,12 +110,15 @@
         </thead>
         <tbody>
             <tr *ngFor="let el of elements; let i = index">
-                <th scope="row" >{{ el.sesion }}</th>
-              
-                <td >{{ el.nombre }}</td>
-                <td >{{ el.t_video }}</td>
-                <td >
-                    <a *ngIf="el.googled" href="{{el.googled}}" target="_blank">
+                <th scope="row">{{ el.sesion }}</th>
+
+                <td>{{ el.nombre }}</td>
+                <td>{{ el.t_video }}</td>
+                <td>
+                    <a *ngIf="el.url_aprende" href="{{el.url_aprende}}" target="_blank">
+                        <mdb-icon fas icon="play-circle" size="2x" class="text-danger pr-3"></mdb-icon>
+                    </a>
+                    <a *ngIf="el.googled && !el.url_aprende" href="{{el.googled}}" target="_blank">
                         <mdb-icon fas icon="play-circle" size="2x" class="indigo-text pr-3"></mdb-icon>
                     </a>
                 </td>
@@ -123,7 +126,7 @@
             </tr>
         </tbody>
     </table>
-   
+
 
 
 
@@ -132,6 +135,3 @@
 
 
 <app-footer></app-footer>
-
-
-   
