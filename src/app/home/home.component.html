@@ -16,9 +16,10 @@
         <h3 class="text-unique mt-5 font-weight-bold"> Secundaria a Distancia para Adultos (SEA)</h3>
         <br>
         <p _ngcontent-otn-c60="" class="text-center text-justify dark-grey-text">
-            Si eres mayor de 15 años y no has concluido tu Educación Básica, el Programa Secundaria a Distancia para Adultos (SEA) te permite continuar con tu preparación educativa mediante el estudio independiente de los contenidos de guías de aprendizaje y materiales audiovisuales.
+            Si eres mayor de 15 años y no has concluido tu Educación Básica, el Programa Secundaria a Distancia para Adultos (SEA) te permite continuar con tu preparación educativa mediante el estudio independiente de los contenidos de guías de aprendizaje y materiales
+            audiovisuales.
         </p>
-    
+
         <button mdbBtn color="default" rounded="true" (click)="openModal()">Conoce más de SEA </button>
 
     </div>
@@ -29,36 +30,34 @@
 <section>
     <div class="container">
         <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
-            
+
             <mdb-carousel-item>
-                <a href="assets/doc/home/Formacion_Docente_Convocatoria_competencias_digitales.pdf" target="_blank">
                     <img
-                    src="assets/img/home/banner_SEA_2-02.png"
+                    src="assets/img/home/banner_3ermomento_2022.png"
                     class="d-block w-100"
                     alt="..."
                     />
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </mdb-carousel-item>
+            
+            <mdb-carousel-item>
+                <a href="assets/doc/home/Formacion_Docente_Convocatoria_competencias_digitales.pdf" target="_blank">
+                    <img src="assets/img/home/banner_SEA_2-02.png" class="d-block w-100" alt="..." />
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                 </div>
             </mdb-carousel-item>
-        
+
             <mdb-carousel-item>
-                <img
-                    src="assets/img/home/banner_guias_aprendizaje.png"
-                    class="d-block w-100"
-                    alt="..."
-                />
+                <img src="assets/img/home/banner_guias_aprendizaje.png" class="d-block w-100" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
                 </div>
             </mdb-carousel-item>
 
 
             <mdb-carousel-item>
-                <img
-                    src="assets/img/home/banner_plan_estudios.png"
-                    class="d-block w-100"
-                    alt="..."
-                />
+                <img src="assets/img/home/banner_plan_estudios.png" class="d-block w-100" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
                 </div>
             </mdb-carousel-item>
@@ -193,21 +192,20 @@
 
 <hr class="container">
 
-<div class="container"> 
+<div class="container">
 
-<h3 class="text-center text-default mt-5 font-weight-bold"> Materiales Audiovisuales SEA</h3>
-<p _ngcontent-otn-c60="" class="my-4 text-center text-justify dark-grey-text">
-    Complementa tu aprendizaje con los materiales audiovisuales que tenemos para ti, selecciona la asignatura de tu interés:
-</p>
+    <h3 class="text-center text-default mt-5 font-weight-bold"> Materiales Audiovisuales SEA</h3>
+    <p _ngcontent-otn-c60="" class="my-4 text-center text-justify dark-grey-text">
+        Complementa tu aprendizaje con los materiales audiovisuales que tenemos para ti, selecciona la asignatura de tu interés:
+    </p>
 
     <div class="row">
         <div class="col-lg-3 col-sm-6 mt-1">
-            <a [routerLink]="['/audiovisuales/lyc']" routerLinkActive="router-link-active" >
+            <a [routerLink]="['/audiovisuales/lyc']" routerLinkActive="router-link-active">
                 <div class="card" style="height: 120px;">
                     <div class="card-body-3">
                         <h5 class="card-title text-white font-weight-bold mt-2">
-                            <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="book-open"></mdb-icon></span>
-                            Lengua y Comunicación </h5>
+                            <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="book-open"></mdb-icon></span> Lengua y Comunicación </h5>
                     </div>
                 </div>
 
@@ -215,12 +213,11 @@
         </div>
 
         <div class="col-lg-3 col-sm-6 mt-1">
-            <a [routerLink]="['/audiovisuales/cyrp']" routerLinkActive="router-link-active" >
+            <a [routerLink]="['/audiovisuales/cyrp']" routerLinkActive="router-link-active">
                 <div class="card" style="height: 120px;">
                     <div class="card-body-2">
                         <h5 class="card-title text-white font-weight-bold mt-2">
-                            <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="pen"></mdb-icon></span>
-                            Cálculo y Resolución de Problemas </h5>
+                            <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="pen"></mdb-icon></span> Cálculo y Resolución de Problemas </h5>
                     </div>
                 </div>
 
@@ -228,12 +225,11 @@
         </div>
 
         <div class="col-lg-3 col-sm-6 mt-1">
-            <a [routerLink]="['/audiovisuales/sya']" routerLinkActive="router-link-active" >
+            <a [routerLink]="['/audiovisuales/sya']" routerLinkActive="router-link-active">
                 <div class="card" style="height: 120px;">
                     <div class="card-body-4">
                         <h5 class="card-title text-white font-weight-bold mt-2">
-                            <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="briefcase-medical"></mdb-icon></span>
-                            Salud y Ambiente  </h5>
+                            <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="briefcase-medical"></mdb-icon></span> Salud y Ambiente </h5>
                     </div>
                 </div>
 
@@ -241,12 +237,11 @@
         </div>
 
         <div class="col-lg-3 col-sm-6 mt-1">
-            <a [routerLink]="['/audiovisuales/fcys']" routerLinkActive="router-link-active" >
+            <a [routerLink]="['/audiovisuales/fcys']" routerLinkActive="router-link-active">
                 <div class="card" style="height: 120px;">
                     <div class="card-body-5">
                         <h5 class="card-title text-white font-weight-bold mt-2">
-                            <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="laugh"></mdb-icon></span>
-                            Familia, Comunidad y Sociedad </h5>
+                            <span class="float-right display-5 opacity-5"><mdb-icon class="gradient-1" fas icon="laugh"></mdb-icon></span> Familia, Comunidad y Sociedad </h5>
                     </div>
                 </div>
 
@@ -275,12 +270,11 @@
                    <div class="col-md-12">
                       <!-- Excerpt -->
                       <p class="dark-grey-text">
-                        
+                        <a href="assets/doc/2022/CalendarioSEA_2022.pdf" target="_blank">
                             <mdb-icon fas icon="arrow-alt-circle-down" size="2x" class="purple-text pr-2"></mdb-icon>
-                            Descarga el calendario escolar de SEA 
-                            <a href="assets/doc/2023/Calendario_SEA_2023.pdf" target="_blank" class="green-text">2023</a>
+                            Descarga el calendario escolar de SEA
 
-                         
+                         </a>
                       </p>
                    </div>
                    <!-- Grid column -->
@@ -295,12 +289,11 @@
                    <div class="col-md-12">
                       <!-- Excerpt -->
                       <p class="dark-grey-text">
-                        
+                        <a href="assets/doc/2022/SEA_Calendario_Evaluaciones_2022.pdf" target="_blank">
                             <mdb-icon fas icon="arrow-alt-circle-down" size="2x" class="cyan-text pr-2"></mdb-icon>
-                            Consulta el calendario de expedición de Certificados SEA 
-                            <a href="assets/doc/2023/SEA_Calendario_Evaluaciones_2023.pdf" target="_blank" class="green-text">2023</a>
+                            Consulta el calendario de expedición de Certificados SEA 2022.
 
-                        
+                        </a>
                       </p>
                    </div>
                    <!-- Grid column -->
@@ -315,12 +308,11 @@
                    <div class="col-md-12">
                       <!-- Excerpt -->
                       <p class="dark-grey-text">
-                        
+                        <a href="assets/doc/2022/certificados2022.pdf" target="_blank">
                             <mdb-icon fas icon="arrow-alt-circle-down" size="2x" class="teal-text pr-2"></mdb-icon>
-                            Programación de actividades para la evaluación y expedición de Certificados SEA 
-                            <a href="assets/doc/2023/calendario_certificados_2023.pdf" target="_blank" class="green-text">2023</a>
+                            Programación de actividades para la evaluación y expedición de Certificados SEA 2022.
 
-                        
+                        </a>
                       </p>
                    </div>
                    <!-- Grid column -->
@@ -344,11 +336,8 @@
     </div>
     <!-- Grid row -->
     <hr class="mb-5">
- </section>
- <!--Calendario-->
-
-
-
+</section>
+<!--Calendario-->
 <!--Contact-->
 <div class="container">
     <h3 class="text-center text-default mt-2 font-weight-bold"> Tus comentarios son muy importantes para nosotros</h3>
