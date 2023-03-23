@@ -19,11 +19,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { CompartidosModule } from './compartidos/compartidos.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ModalComponent } from './modal/modal.component';
+import { EmergenteComponent } from './modal/emergente/emergente.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    EmergenteComponent,
+    DomseguroPipe
   
   ],
   imports: [

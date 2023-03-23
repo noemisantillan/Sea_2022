@@ -9,6 +9,7 @@ import { CompartidosModule } from '../compartidos/compartidos.module';
 import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { EnfoquesComponent } from './pages/enfoques/enfoques.component';
 import { MaterialasesoresComponent } from './pages/materialasesores/materialasesores.component';
+import { ProgramacionasesoresComponent } from './pages/programacionasesores/programacionasesores.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MaterialasesoresComponent } from './pages/materialasesores/materialases
     PerfilComponent,
     CapacitacionComponent,
     EnfoquesComponent,
-    MaterialasesoresComponent
+    MaterialasesoresComponent,
+    ProgramacionasesoresComponent
   ],
   imports: [
     CommonModule,

@@ -25,22 +25,10 @@
 </section>
 <!--Intro-->
 
-
-
 <!--Carousel Notificaciones-->
 <section>
     <div class="container">
         <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
-
-            <mdb-carousel-item>
-                    <img
-                    src="assets/img/home/banner_3ermomento_2022.png"
-                    class="d-block w-100"
-                    alt="..."
-                    />
-                <div class="carousel-caption d-none d-md-block">
-                </div>
-            </mdb-carousel-item>
             
             <mdb-carousel-item>
                 <a href="assets/doc/home/Formacion_Docente_Convocatoria_competencias_digitales.pdf" target="_blank">
@@ -79,7 +67,41 @@
         </mdb-carousel>
     </div>
 </section>
+<hr class="container">
 <!--Carousel-->
+
+<section>
+    <div class="container mt-5 mb-5">
+        <h3 class="text-center text-unique mt-4 font-weight-bold "> Experiencias exitosas</h3>
+        <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation mt-3" [type]="'carousel-multi-item'" [animation]="'slide'">
+            <mdb-carousel-item *ngFor="let item of slides; let i = index">
+                <div class="col-md-4" *ngFor="let card of item; let cardIndex = index">
+                  <mdb-card class="my-1" id="tarjetones">
+                    <a (click)="emergenteModal(card.title, card.url)" *ngIf="card.tipo == 1">
+                        <mdb-card-img  [src]="card.img" alt="Card image cap"></mdb-card-img>
+                        <mdb-card-body>
+                            <mdb-card-title class="text-center">
+                                <p>{{card.title}}</p>
+                            </mdb-card-title>
+                        </mdb-card-body>
+                    </a>
+                    <a *ngIf="card.tipo == 2" href="{{card.url}}" target="_blank">
+                        <mdb-card-img  [src]="card.img" alt="Card image cap"></mdb-card-img>
+                        <mdb-card-body>
+                            <mdb-card-title class="text-center text-white">
+                                <p>{{card.title}}</p>
+                            </mdb-card-title>
+                        </mdb-card-body>
+                    </a>
+                  </mdb-card>
+                </div>
+              </mdb-carousel-item>
+          </mdb-carousel>
+
+    </div>
+</section>
+<hr class="container">
+
 
 <!--Cards-->
 <section _ngcontent-sur-c60="" class="mt-5">
@@ -133,6 +155,8 @@
                             <button mdbBtn type="button" color="default-2" rounded="true" mdbWavesEffect [routerLink]="['/asesores/perfil']" routerLinkActive="router-link-active">Perfil y funciones</button>
                             <br>
                             <button mdbBtn type="button" color="default" rounded="true" mdbWavesEffect [routerLink]="['/asesores/capacitacion']" routerLinkActive="router-link-active">Curso de capacitación</button>
+                            <br>
+                            <button mdbBtn type="button" color="default-3" rounded="true" mdbWavesEffect [routerLink]="['/asesores/programacionasesores']" routerLinkActive="router-link-active">Programación regular</button>
                         </mdb-card-body>
                     </mdb-card>
                 </div>
@@ -251,11 +275,12 @@
                    <div class="col-md-12">
                       <!-- Excerpt -->
                       <p class="dark-grey-text">
-                        <a href="assets/doc/2022/CalendarioSEA_2022.pdf" target="_blank">
+                        
                             <mdb-icon fas icon="arrow-alt-circle-down" size="2x" class="purple-text pr-2"></mdb-icon>
-                            Descarga el calendario escolar de SEA
+                            Descarga el calendario escolar de SEA 
+                            <a href="assets/doc/2023/Calendario_SEA_2023.pdf" target="_blank" class="green-text">2023</a>
 
-                         </a>
+                         
                       </p>
                    </div>
                    <!-- Grid column -->
@@ -270,11 +295,12 @@
                    <div class="col-md-12">
                       <!-- Excerpt -->
                       <p class="dark-grey-text">
-                        <a href="assets/doc/2022/SEA_Calendario_Evaluaciones_2022.pdf" target="_blank">
+                        
                             <mdb-icon fas icon="arrow-alt-circle-down" size="2x" class="cyan-text pr-2"></mdb-icon>
-                            Consulta el calendario de expedición de Certificados SEA 2022.
+                            Consulta el calendario de expedición de Certificados SEA 
+                            <a href="assets/doc/2023/SEA_Calendario_Evaluaciones_2023.pdf" target="_blank" class="green-text">2023</a>
 
-                        </a>
+                        
                       </p>
                    </div>
                    <!-- Grid column -->
@@ -289,11 +315,12 @@
                    <div class="col-md-12">
                       <!-- Excerpt -->
                       <p class="dark-grey-text">
-                        <a href="assets/doc/2022/certificados2022.pdf" target="_blank">
+                        
                             <mdb-icon fas icon="arrow-alt-circle-down" size="2x" class="teal-text pr-2"></mdb-icon>
-                            Programación de actividades para la evaluación y expedición de Certificados SEA 2022.
+                            Programación de actividades para la evaluación y expedición de Certificados SEA 
+                            <a href="assets/doc/2023/calendario_certificados_2023.pdf" target="_blank" class="green-text">2023</a>
 
-                        </a>
+                        
                       </p>
                    </div>
                    <!-- Grid column -->

@@ -1,0 +1,32 @@
+<app-header></app-header>
+<app-navegacion></app-navegacion>
+<div class= "container text-muted mt-3">
+    <mdb-breadcrumb customClass="indigo lighten-5">
+      <mdb-breadcrumb-item [routerLink]="['/home']" routerLinkActive="router-link-active" >SEA</mdb-breadcrumb-item>
+      <mdb-breadcrumb-item class="active">Asesores</mdb-breadcrumb-item>
+      <mdb-breadcrumb-item class="active">Programación Regular</mdb-breadcrumb-item>
+    </mdb-breadcrumb>
+</div>
+
+<div class="container mb-5">
+    <h3 class="text-left text-default mt-4 font-weight-bold"> Programación regular</h3>
+    <table mdbTable class="mt-5 ">
+        <thead class="black white-text">
+          <tr class="text-center">
+            <th *ngFor="let head of headElements" scope="col">{{ head }} </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr mdbTableCol *ngFor="let el of elements" class="text-center">
+            <th scope="row"><mdb-icon fas icon="file-alt" *ngIf="el[0].name"></mdb-icon><a href="./assets/doc/asesores/programacion/{{el[0].doc}}" target="_blank" *ngIf="el[0].doc"> {{ el[0].name }}</a></th>
+            <th scope="row" ><mdb-icon fas icon="file-alt" *ngIf="el[1].name"></mdb-icon><a href="./assets/doc/asesores/programacion/{{el[1].doc}}" target="_blank" *ngIf="el[1].doc"> {{ el[1].name }}</a></th>
+          </tr>
+        </tbody>
+      </table>
+      
+
+
+</div>
+
+
+<app-footer></app-footer>
